@@ -1,9 +1,18 @@
 
 import './App.css';
+import AboutSection from './components/AboutSection';
+import BestSellers from './components/BestSellers';
+import Header from './components/Header';
+import Hero from './components/Hero';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div>
+      <Header />
+      <Hero />
+      <BestSellers />
+      <AboutSection />
+    </div>
   );
 }
 

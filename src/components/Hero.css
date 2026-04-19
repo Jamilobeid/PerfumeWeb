@@ -1,0 +1,37 @@
+.hero {
+  height: 100vh;
+  background-image: url("C:\Users\User\Desktop\Experience\perfumeweb\public\captivating-perfume-bottle-illuminated-with-soft-golden-light-in-a-dark-setting-photo.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+.hero button {
+  height:80px;
+  width:200px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.61);
+  border: none;
+  color: Black;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  border-radius: 0px;
+  font-weight: bold;
+  transition: transform 1.2s ease;
+}
+.hero button:hover{
+    transform: scale(1.2);
+}
