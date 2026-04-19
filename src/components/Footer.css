@@ -1,0 +1,43 @@
+.footer {
+  background:linear-gradient(to bottom, white,#555, black);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 70px;
+  margin-bottom: 35px;
+  color: Black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* ICONS */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 35px;
+}
+
+.social-icons a {
+  font-size: 60px;
+  color: #ccc;
+  transition: 0.3s;
+  padding: 50px;
+}
+
+.social-icons a:hover {
+  color: black;
+  transform: scale(1.2);
+}
+
+.footer-text {
+  font-size: 15px;
+  color: #888;
+}

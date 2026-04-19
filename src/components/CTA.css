@@ -1,0 +1,59 @@
+.cta {
+  padding: 50px 40px;
+  background: white; /* outer background */
+}
+.cta-image {
+  max-width: 1500px;
+  margin: auto;
+
+  background: url("C:\Users\User\Desktop\Experience\perfumeweb\public\perfume4.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 20px;
+  overflow: hidden;   /* THIS makes image corners round */
+  padding: 140px 40px;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta h2 {
+  font-size: 45px;
+  color: White;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.cta p {
+  font-size: 25px;
+  color: white;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cta-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.cta-btn:hover {
+  background: #555;
+  transform: scale(1.2);
+}

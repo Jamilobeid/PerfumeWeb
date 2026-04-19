@@ -3,6 +3,7 @@ import "./BestSellers.css";
 function BestSellers() {
   return (
     <section className="best-sellers">
+      <div className="divider2"></div>
 
       <h1 className="best-title">Our Best Sellers This Month</h1>
 
