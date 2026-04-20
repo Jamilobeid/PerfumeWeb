@@ -1,4 +1,5 @@
 import "./CTA.css";
+import { Link } from "react-router-dom";
 
 function CTA() {
   return (
@@ -13,8 +14,9 @@ function CTA() {
             Explore a curated collection of fragrances crafted to express
             elegance, confidence, and individuality.
           </p>
-
-          <button className="cta-btn">Explore Collection</button>
+          <Link to ="/shop">
+            <button className="cta-btn">Explore Collection</button>
+          </Link>
         </div>
 
       </div>

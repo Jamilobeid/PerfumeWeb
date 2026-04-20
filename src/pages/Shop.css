@@ -1,0 +1,129 @@
+.shop-page {
+  padding: 160px 40px 80px;
+  background: white;
+  min-height: 100vh;
+}
+
+.shop-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.shop-container h1 {
+  text-align: center;
+  font-size: 60px;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.shop-container p {
+  text-align: center;
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.shop-topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.shop-topbar input,
+.shop-topbar select {
+  padding: 15px 20px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-info h2 {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.product-info p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.product-info span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 18px;
+}
+
+.product-info button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.product-info button:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-container h1 {
+    font-size: 42px;
+  }
+}

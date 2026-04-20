@@ -49,3 +49,38 @@ nav a:hover{
 .header.scrolled nav a {
   color: black;
 }
+/* for shop*/
+.header.shop{
+  background: black;
+}
+/*for contact*/
+.header.contact{
+  background:black;
+}
+nav button{
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+nav button:hover {
+  background: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+

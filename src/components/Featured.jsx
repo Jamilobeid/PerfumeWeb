@@ -1,4 +1,5 @@
 import "./Featured.css";
+import { Link } from "react-router-dom";
 
 function Featured() {
   return (
@@ -12,7 +13,9 @@ function Featured() {
             <h3>Dior Sauvage</h3>
           </div>
           <p className="label">Fresh & Bold</p>
-          <button>Add to Cart</button>
+          <Link to="/shop">
+            <button>Add to Cart</button>
+          </Link>
         </div>
 
         <div className="card">
@@ -21,7 +24,9 @@ function Featured() {
             <h3>Libre</h3>
           </div>
           <p className="label">Elegant Floral</p>
-          <button>Add to Cart</button>
+          <Link to="/shop">
+            <button>Add to Cart</button>
+          </Link>
         </div>
 
         <div className="card">
@@ -30,7 +35,9 @@ function Featured() {
             <h3>Eros</h3>
           </div>
           <p className="label">Bold & Seductive </p>
-          <button>Add to Cart</button>
+          <Link to="/shop">
+            <button>Add to Cart</button>
+          </Link>
         </div>
 
         <div className="card">
@@ -39,7 +46,9 @@ function Featured() {
             <h3>Black Orchid</h3>
           </div>
           <p className="label">Dark Luxury</p>
-          <button>Add to Cart</button>
+          <Link to="/shop">
+            <button>Add to Cart</button>
+          </Link>
         </div>
 
         <div className="card">
@@ -48,7 +57,9 @@ function Featured() {
             <h3>Born in Roma</h3>
           </div>
           <p className="label">Modern Sweet</p>
-          <button>Add to Cart</button>
+          <Link to="/shop">
+            <button>Add to Cart</button>
+          </Link>
         </div>
 
         <div className="card">
@@ -57,7 +68,9 @@ function Featured() {
             <h3>La Vie Est Belle</h3>
           </div>
           <p className="label">Sweet & Elegant</p>
-          <button>Add to Cart</button>
+          <Link to="/shop">
+            <button>Add to Cart</button>
+          </Link>
         </div>
 
         <div className="card">
@@ -66,7 +79,9 @@ function Featured() {
             <h3>YSL Y</h3>
           </div>
           <p className="label">Clean Intense</p>
-          <button>Add to Cart</button>
+          <Link to="/shop">
+            <button>Add to Cart</button>
+          </Link>
         </div>
 
         <div className="card">
@@ -75,7 +90,9 @@ function Featured() {
             <h3>Chanel Chance</h3>
           </div>
           <p className="label">Soft Chic</p>
-          <button>Add to Cart</button>
+          <Link to="/shop">
+            <button>Add to Cart</button>
+          </Link>
         </div>
       </div>
     </section>
