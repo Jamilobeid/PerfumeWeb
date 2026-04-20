@@ -1,19 +1,19 @@
 import "./CartSidebar.css";
+import { useNavigate } from "react-router-dom";
 
 function CartSidebar({ cart, isOpen, closeCart, removeFromCart, clearCart }) {
     const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const navigate = useNavigate();
 
     const handleCheckout = () => {
     if (cart.length === 0) {
       alert("Your cart is empty");
       return;
     }
-
-    alert(`Order placed! Total: $${total}`);
-
-    clearCart();
     closeCart();
+    navigate("/checkout");
   };
+
 
   return (
     <div className={`cart-overlay ${isOpen ? "open" : ""}`}>

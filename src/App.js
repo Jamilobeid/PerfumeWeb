@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 import CartSidebar from "./components/CartSidebar";
+import Checkout from './pages/Checkout';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop addToCart={addToCart} />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/checkout" element={<Checkout cart={cart} />} />
         </Routes>
       </main>
 

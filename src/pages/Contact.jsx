@@ -2,6 +2,25 @@ import "./Contact.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter, FaEnvelope } from "react-icons/fa6";
 
 function Contact() {
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const firstName = form.firstName.value.trim();
+  const lastName = form.lastName.value.trim();
+  const email = form.email.value.trim();
+  const phone = form.phone.value.trim();
+  const message = form.message.value.trim();
+
+  if (!firstName || !lastName || !email || !phone || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  alert("Message sent successfully!");
+  form.reset();
+  };
   return (
     <section className="contact-page">
       <div className="contact-container">
@@ -10,15 +29,15 @@ function Contact() {
           We would love to hear from you. Send us a message or reach us through our social platforms.
         </p>
 
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="name-row">
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
+            <input name="firstName" type="text" placeholder="First Name" />
+            <input name="lastName" type="text" placeholder="Last Name" /> 
           </div>
 
-          <input type="email" placeholder="Email Address" />
-          <input type="tel" placeholder="Phone Number" />
-          <textarea placeholder="Your Message" rows="6"></textarea>
+          <input name="email" type="email" placeholder="Email Address" />
+          <input name="phone" type="tel" placeholder="Phone Number" />
+          <textarea name="message" placeholder="Your Message" rows="6"></textarea>
 
           <button type="submit">Send Message</button>
         </form>

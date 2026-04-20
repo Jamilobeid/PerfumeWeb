@@ -73,6 +73,33 @@ nav button:hover {
   color: black;
   transform: scale(1.1);
 }
+.header.checkout{
+  background:black;
+}
+.header.checkout h1{
+  color:white;
+}
+.header.checkout nav a{
+  color:white;
+}
+.header.checkout nav button{
+  color:white;
+}
+.header.checkout nav button:hover{
+  background: white;
+  color: black;
+  transform: scale(1.1);
+}
+.header.scrolled nav button {
+  border: 2px solid black;
+  color: black;
+  background: none;
+}
+
+.header.scrolled nav button:hover {
+  background: black;
+  color: white;
+}
 
 
 

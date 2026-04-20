@@ -17,7 +17,7 @@ function Header({cartCount, openCart}){
         };
     }, []);
     return (
-        <header className={`header ${scrolled ? "scrolled" : ""} ${location.pathname.replace("/", "")}`}>
+        <header className={`header ${location.pathname === "/" && scrolled ? "scrolled" : ""} ${location.pathname.replace("/", "")}`}>
         <h1>SoulScents</h1>
         <nav>
             <Link to="/">Home</Link>
