@@ -32,3 +32,4 @@ C:\Users\User\Desktop\Experience\perfumeweb\backend2\obj\Debug\net10.0\refint\ba
 C:\Users\User\Desktop\Experience\perfumeweb\backend2\obj\Debug\net10.0\backend2.pdb
 C:\Users\User\Desktop\Experience\perfumeweb\backend2\obj\Debug\net10.0\backend2.genruntimeconfig.cache
 C:\Users\User\Desktop\Experience\perfumeweb\backend2\obj\Debug\net10.0\ref\backend2.dll
+C:\Users\User\Desktop\Experience\perfumeweb\backend2\bin\Debug\net10.0\backend2.staticwebassets.runtime.json

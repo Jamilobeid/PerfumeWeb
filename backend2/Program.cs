@@ -15,6 +15,8 @@ var app = builder.Build();
 
 app.UseCors("AllowReactApp");
 
+app.UseStaticFiles();
+
 app.UseHttpsRedirection();
 
 app.MapControllers();
