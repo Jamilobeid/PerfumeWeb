@@ -13,10 +13,19 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+       policy.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
+});
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
 
 var app = builder.Build();
@@ -26,6 +35,8 @@ app.UseCors("AllowReactApp");
 app.UseStaticFiles();
 
 app.UseHttpsRedirection();
+
+app.UseSession();
 
 app.MapControllers();
 
@@ -70,4 +81,5 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+app.Logger.LogInformation("Backend is running...");
 app.Run();

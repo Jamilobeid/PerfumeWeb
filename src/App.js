@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,15 +11,45 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const removeFromCart = (indexToRemove) => {
-    setCart(cart.filter((_, index) => index !== indexToRemove));
-  };
+
+  useEffect(() => {
+    fetch("http://localhost:5155/api/cart", {
+      credentials: "include"
+    })
+      .then(res => res.json())
+      .then(data => setCart(data))
+      .catch(error => console.log(error));
+  }, []);
+
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    fetch(`http://localhost:5155/api/cart/${product.id}`, {
+      method: "POST",
+      credentials: "include"
+    })
+      .then(res => res.json())
+      .then(data => setCart(data));
   };
+
+  const removeFromCart = (indexToRemove) => {
+    const productId = cart[indexToRemove].id;
+
+    fetch(`http://localhost:5155/api/cart/${productId}`, {
+      method: "DELETE",
+      credentials: "include"
+    })
+      .then(res => res.json())
+      .then(data => setCart(data));
+  };
+
   const clearCart = () => {
-  setCart([]);
+    fetch("http://localhost:5155/api/cart", {
+      method: "DELETE",
+      credentials: "include"
+    })
+      .then(res => res.json())
+      .then(data => setCart(data));
   };
+
   return (
     <div className="app-layout">
       <Header cartCount={cart.length} openCart={() => setIsCartOpen(true)} />
@@ -45,6 +75,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
